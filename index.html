@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <div class="form-group">
+            <label for="site">Site:</label>
+            <input type="text" id="site" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" id="password" required>
+        </div>
+        <div class="form-group">
+            <label for="expiry_days">Expiry Days:</label>
+            <input type="number" id="expiry_days" value="90">
+        </div>
+        <div class="form-group">
+            <label for="2fa_code">2FA Code:</label>
+            <input type="text" id="2fa_code">
+        </div>
+        <button onclick="addPassword()">Add Password</button>
+        <button onclick="getPassword()">Get Password</button>
+        <button onclick="generatePassword()">Generate Password</button>
+        <button onclick="analyzePassword()">Analyze Password</button>
+        <button onclick="autoFill()">Auto Fill</button>
+        <button onclick="verify2FA()">Verify 2FA</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
